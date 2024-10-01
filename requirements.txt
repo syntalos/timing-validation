@@ -1,0 +1,8 @@
+edlio
+matplotlib
+numba
+seaborn
+numpy
+Pint
+scipy
+zarr
