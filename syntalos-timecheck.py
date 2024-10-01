@@ -21,16 +21,16 @@ from scipy.fft import fft, ifft
 from edlio.dataio.tsyncfile import TSyncFileMode
 from matplotlib.collections import PatchCollection
 
-from syntalos_timetest.ttutils import (
+from sy_timetest.ttutils import (
     SyntalosTimeSyncDataLoader,
     align_start_times,
 )
-from syntalos_timetest.misc import (
+from sy_timetest.misc import (
     plot_set_preferences,
     logging_set_basic_config,
 )
-from syntalos_timetest.cachemgr import get_home_persistent_temp
-from syntalos_timetest.syntalos_tsexp_defs import (
+from sy_timetest.cachemgr import get_home_persistent_temp
+from sy_timetest.syntalos_tsexp_defs import (
     EXPERIMENTS_MARATHON,
     EXPERIMENTS_LAUNCHSYNC,
 )
