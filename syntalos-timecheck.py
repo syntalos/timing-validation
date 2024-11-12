@@ -625,12 +625,12 @@ if __name__ == '__main__':
 
         timings, intan_raw = tsdl.load(SYNC_INTAN_TS)
 
-        intan_newts_m = timings['intan'][0]
+        intan_synced_ts = timings['intan'][0]
 
         # # %%
         sig_m = np.concatenate(
             (
-                intan_newts_m.reshape((len(intan_newts_m), 1)).T,
+                intan_synced_ts.reshape((len(intan_synced_ts), 1)).T,
                 timings['intan'][1].reshape((len(timings['intan'][1]), 1)).T,
             ),
             axis=0,
@@ -866,7 +866,7 @@ if __name__ == '__main__':
         t_end = len(d_array[0]) - 500
 
         # time differences between the sampling points
-        dat_d = np.diff(intan_newts_m[t_beg * intan_sampling_rate : t_end * intan_sampling_rate])  # µs
+        dat_d = np.diff(intan_synced_ts[t_beg * intan_sampling_rate : t_end * intan_sampling_rate])  # µs
         # mean time differnde
         dat_dm = np.mean(dat_d)  # µs
 
